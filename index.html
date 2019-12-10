@@ -1,0 +1,462 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function checkMail(){
+    var m1 = document.enquete.MailR;
+    var m2 = document.enquete.MailRC;
+    var m3 = document.enquete.MailN;
+    var m4 = document.enquete.MailNC;
+    if(m1 != null && m2 != null){
+       if(!m1.value.match(/.+@.+\..+/)){
+           window.alert('メールアドレスの入力に誤りがあります');
+           m1.focus();
+           return false;
+       }else if(m1.value != m2.value){
+           window.alert('メールアドレスが一致しておりません。');
+           m2.focus();
+           return false;
+       }else{
+           return true;
+       }
+    }
+    if(m3 != null && m4 != null){
+       if(m3.value != "" && !m3.value.match(/.+@.+\..+/)){
+           window.alert('メールアドレスの入力に誤りがあります');
+           m3.focus();
+           return false;
+       }else if(m3.value != m4.value){
+           window.alert('メールアドレスが一致しておりません。');
+           m4.focus();
+           return false;
+       }else{
+           return true;
+       }
+    }
+    return true;
+}
+</script>
+<title>製品使用後アンケート(ピータッチキューブ)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<div align="center">
+<b><font size="4" color="#000000">製品使用後アンケート(ピータッチキューブ)</font></b><br><br>
+<font color="#000000">今後の当社の製品開発のために、皆様のお声を伺いたいと思いますので、ご協力をよろしくお願いいたします。</font>
+<hr width="80%" size="1">
+</div>
+<form name="enquete" method="post" action="https://secure6.brother.co.jp/enquete/EN-RE003.aspx" enctype="multipart/form-data" onSubmit="return checkMail()" >
+<table border="0" align="center"><tr><td>
+<br>
+<table border="0">
+<tr><td>
+<font color="#000000" size=2>お名前（必須）</font></td></tr>
+<tr><td>
+<input type="text" name="NameR" size="38">
+</td></tr></table>
+<br>
+<table border="0">
+<tr><td>
+<font color="#000000" size=2>メールアドレス（必須）</font></td></tr>
+<tr><td>
+<input type="text" name="MailR" size="38">
+</td></tr></table>
+<br>
+<font color="#000000" size=2>都道府県（必須）</font><br>
+<select size="1" name="AddressR">
+<option value="北海道">北海道
+<option value="青森県">青森県
+<option value="岩手県">岩手県
+<option value="宮城県">宮城県
+<option value="秋田県">秋田県
+<option value="山形県">山形県
+<option value="福島県">福島県
+<option value="茨城県">茨城県
+<option value="栃木県">栃木県
+<option value="群馬県">群馬県
+<option value="埼玉県">埼玉県
+<option value="千葉県">千葉県
+<option value="東京都">東京都
+<option value="神奈川県">神奈川県
+<option value="新潟県">新潟県
+<option value="富山県">富山県
+<option value="石川県">石川県
+<option value="福井県">福井県
+<option value="山梨県">山梨県
+<option value="長野県">長野県
+<option value="岐阜県">岐阜県
+<option value="静岡県">静岡県
+<option value="愛知県">愛知県
+<option value="三重県">三重県
+<option value="滋賀県">滋賀県
+<option value="京都府">京都府
+<option value="大阪府">大阪府
+<option value="兵庫県">兵庫県
+<option value="奈良県">奈良県
+<option value="和歌山県">和歌山県
+<option value="鳥取県">鳥取県
+<option value="島根県">島根県
+<option value="岡山県">岡山県
+<option value="広島県">広島県
+<option value="山口県">山口県
+<option value="徳島県">徳島県
+<option value="香川県">香川県
+<option value="愛媛県">愛媛県
+<option value="高知県">高知県
+<option value="福岡県">福岡県
+<option value="佐賀県">佐賀県
+<option value="長崎県">長崎県
+<option value="熊本県">熊本県
+<option value="大分県">大分県
+<option value="宮崎県">宮崎県
+<option value="鹿児島県">鹿児島県
+<option value="沖縄県">沖縄県
+</select>
+<br>
+<br><font color="#000000" size=2>Ｑ１．ご使用された製品はどちらですか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item001RRadio" value="PT-P710BT" id="1-1"> <font size=2 color="#000000">PT-P710BT</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item001RRadio" value="PT-P300BT" id="1-2"> <font size=2 color="#000000">PT-P300BT</font>
+</td>
+</tr>
+</table>
+<br><font color="#000000" size=2>　　　製品のシリアルコードをご記入ください。（必須）</font><br>
+<input type="text" name="Item002RTextB" size="38">
+<br><font size=2>プリンターのカバーを開けて見えるバーコード下の英数字　SER.NO./N de serie以降の１５桁をご記入ください。</font>
+<br>
+<br>
+<br><font color="#000000" size=2>Ｑ２．セットアップから印刷までの準備は簡単でしたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item002RRadio" value="とても簡単" id="3-1"> <font size=2 color="#000000">とても簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item002RRadio" value="簡単" id="3-2"> <font size=2 color="#000000">簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item002RRadio" value="少し難しい" id="3-3"> <font size=2 color="#000000">少し難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item002RRadio" value="とても難しい" id="3-4"> <font size=2 color="#000000">とても難しい</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　満足した点、不満な点がありましたら具体的にご記載ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item004NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ３．印刷する際、スマホとPCのどちらをお使いですか？(PT-P300BTはスマホのみ)（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item004RRadio" value="スマホのみ" id="5-1"> <font size=2 color="#000000">スマホのみ</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item004RRadio" value="スマホ中心だが、PCも使用する" id="5-2"> <font size=2 color="#000000">スマホ中心だが、PCも使用する</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item004RRadio" value="スマホとPC、両方を同じくらい使用する" id="5-3"> <font size=2 color="#000000">スマホとPC、両方を同じくらい使用する</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item004RRadio" value="PC中心だが、スマホも使用する" id="5-4"> <font size=2 color="#000000">PC中心だが、スマホも使用する</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item004RRadio" value="PCのみ" id="5-5"> <font size=2 color="#000000">PCのみ</font>
+</td>
+</tr>
+</table>
+<br><font color="#000000" size=2>Ｑ４．スマホ専用アプリ "P-touch Design&Print" の使い勝手はどうでしたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item005RRadio" value="とても簡単" id="6-1"> <font size=2 color="#000000">とても簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item005RRadio" value="簡単" id="6-2"> <font size=2 color="#000000">簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item005RRadio" value="少し難しい" id="6-3"> <font size=2 color="#000000">少し難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item005RRadio" value="とても難しい" id="6-4"> <font size=2 color="#000000">とても難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item005RRadio" value="使用していない" id="6-5"> <font size=2 color="#000000">使用していない</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　満足した点、不満な点がありましたら具体的にご記載ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item007NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ５．スマホ専用アプリ "iPrint&Label" の使い勝手はどうでしたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item007RRadio" value="とても簡単" id="8-1"> <font size=2 color="#000000">とても簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item007RRadio" value="簡単" id="8-2"> <font size=2 color="#000000">簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item007RRadio" value="少し難しい" id="8-3"> <font size=2 color="#000000">少し難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item007RRadio" value="とても難しい" id="8-4"> <font size=2 color="#000000">とても難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item007RRadio" value="使用していない" id="8-5"> <font size=2 color="#000000">使用していない</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　満足した点、不満な点がありましたら具体的にご記載ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item009NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ６．PC専用アプリ "P-touch Editor" の使い勝手はどうでしたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item009RRadio" value="とても簡単" id="10-1"> <font size=2 color="#000000">とても簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item009RRadio" value="簡単" id="10-2"> <font size=2 color="#000000">簡単</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item009RRadio" value="少し難しい" id="10-3"> <font size=2 color="#000000">少し難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item009RRadio" value="とても難しい" id="10-4"> <font size=2 color="#000000">とても難しい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item009RRadio" value="使用していない" id="10-5"> <font size=2 color="#000000">使用していない</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　満足した点、不満な点がありましたら具体的にご記載ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item011NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<table border="0">
+<tr><td>
+<font color="#000000" size=2>Ｑ７．どのようなラベルを、どのように使いましたか？（複数記載可）（必須）</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item012RTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>(例)お店のロゴを印刷したプレミアムテープを製品に貼って販売した。おしゃれテープを店舗内の装飾に使った。プライスカードを作った。シェアラベルでお店の宣伝をした。店舗内の整理整頓に使った。</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ８．実際に使用された状態の写真を提供して頂くことは可能でしょうか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item012RRadio" value="はい" id="13-1"> <font size=2 color="#000000">はい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item012RRadio" value="いいえ" id="13-2"> <font size=2 color="#000000">いいえ</font>
+</td>
+</tr>
+</table>
+<br><font color="#000000" size=2>Ｑ９．作成したテープの満足度はいかがでしたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item013RRadio" value="とても満足" id="14-1"> <font size=2 color="#000000">とても満足</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item013RRadio" value="満足" id="14-2"> <font size=2 color="#000000">満足</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item013RRadio" value="少し不満" id="14-3"> <font size=2 color="#000000">少し不満</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item013RRadio" value="とても不満" id="14-4"> <font size=2 color="#000000">とても不満</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　満足した点、不満な点がありましたら具体的にご記載ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item015NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ１０．どのくらいの頻度で使用されましたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item015RRadio" value="ほぼ毎日" id="16-1"> <font size=2 color="#000000">ほぼ毎日</font>
+</td></tr>
+<tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item015RRadio" value="週に2～3回程度" id="16-2"> <font size=2 color="#000000">週に2～3回程度</font>
+</td></tr>
+<tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item015RRadio" value="週に1回程度" id="16-3"> <font size=2 color="#000000">週に1回程度</font>
+</td></tr>
+<tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item015RRadio" value="月に1～2回程度" id="16-4"> <font size=2 color="#000000">月に1～2回程度</font>
+</td></tr>
+<tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item015RRadio" value="ほとんど使っていない" id="16-5"> <font size=2 color="#000000">ほとんど使っていない</font>
+</td></tr>
+</table>
+<br><font color="#000000" size=2>Ｑ１１．1回あたり、平均で何枚くらいのテープを印刷しましたか？（必須）</font><br>
+<input type="text" name="Item017RTextB" size="38">
+<br>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>Ｑ１２．使用したテープカセットの種類は何ですか？製品型番でご回答ください。（必須）</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item018RTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>(例)TZe-PR254、TZe-MQ851　（製品型番はテープカセット上部の表示ラベル内に記載があります）</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ１３．製品使用後に購入されたテープカセットはありますか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item018RRadio" value="はい" id="19-1"> <font size=2 color="#000000">はい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item018RRadio" value="いいえ" id="19-2"> <font size=2 color="#000000">いいえ</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　はい　と答えた方は製品型番を教えてください。複数種類ある方は全てについて教えてください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item020NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>(例)TZe-PR254を2個とTZe-MQ851を1個　（製品型番はテープカセット上部の表示ラベル内に記載があります）</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ１４．新しいテープカセットを購入する際、何を参考にして選びますか？（必須）（複数選択可能）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="カタログ" id="21-1">
+<font size=2 color="#000000">カタログ</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="ブラザーホームページ" id="21-2">
+<font size=2 color="#000000">ブラザーホームページ</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="スマホ専用アプリ "P-touch Design&Print"" id="21-3">
+<font size=2 color="#000000">スマホ専用アプリ "P-touch Design&Print"</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="ブラザー公式通販サイト" id="21-4">
+<font size=2 color="#000000">ブラザー公式通販サイト</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="ブラザー以外の通販サイト（Amazon、楽天など）" id="21-5">
+<font size=2 color="#000000">ブラザー以外の通販サイト（Amazon、楽天など）</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="SNS(インスタグラムなど)" id="21-6">
+<font size=2 color="#000000">SNS(インスタグラムなど)</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="checkbox" name="Item020RChk07" value="その他" id="21-7">
+<font size=2 color="#000000">その他</font>
+</td>
+</tr>
+</table>
+<br><font color="#000000" size=2>Ｑ１５．ブラザー公式のカタログ、ホームページ、アプリから欲しいテープを簡単に選ぶことはできましたか？（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item021RRadio" value="とても選びやすい" id="22-1"> <font size=2 color="#000000">とても選びやすい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item021RRadio" value="選びやすい" id="22-2"> <font size=2 color="#000000">選びやすい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item021RRadio" value="少し選びにくい" id="22-3"> <font size=2 color="#000000">少し選びにくい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item021RRadio" value="とても選びにくい" id="22-4"> <font size=2 color="#000000">とても選びにくい</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item021RRadio" value="見ていないから分からない" id="22-5"> <font size=2 color="#000000">見ていないから分からない</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　選びやすい、選びにくいと感じた理由を具体的に教えてください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item023NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<table border="0">
+<tr><td>
+<font color="#000000" size=2>Ｑ１６．次に使いたい(購入したい)テープを教えてください。複数ある場合は全てご記入ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item024NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>製品型番が分からない場合や、「欲しいテープがラインナップにない（見つけられない）場合は、要望するテープの色、材質、幅等をご自由にご記入ください</font></td></tr></table>
+<br>
+<font color="#000000" size=2>Ｑ１７．総合的な満足度を教えてください。（必須）</font><br>
+<table border="0"><tr><td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item024RRadio" value="とても満足" id="25-1"> <font size=2 color="#000000">とても満足</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item024RRadio" value="満足" id="25-2"> <font size=2 color="#000000">満足</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item024RRadio" value="少し不満" id="25-3"> <font size=2 color="#000000">少し不満</font>
+</td>
+<td>&nbsp;&nbsp;</td><td>
+<input type="radio" name="Item024RRadio" value="とても不満" id="25-4"> <font size=2 color="#000000">とても不満</font>
+</td>
+</tr>
+</table>
+<br><table border="0">
+<tr><td>
+<font color="#000000" size=2>　　　満足した点、不満な点がありましたら具体的にご記載ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item026NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<table border="0">
+<tr><td>
+<font color="#000000" size=2>Ｑ１８．ご意見、ご要望などありましたら、ご自由にご記入ください。</font></td></tr>
+<tr><td>
+<textarea rows="3" name="Item027NTextA" cols="50">
+</textarea>
+</td></tr>
+<tr><td><font size=2>（全角１９９８文字まで入力が可能です）</font></td></tr></table>
+<br>
+<input type="submit" name="submit" value="送信">
+<input type="reset" name="reset" value="リセット">
+</tr>
+
+</table>
+<hr width="80%" size="1">
+<table align='center' >
+<tr>
+<td><P align='left'><font size='2'><a target='_blank' href='https://www.brother.co.jp/copyright/index.aspx'>ご利用条件</a></font></P></td>
+<td><P align='left'><font size='2'><a target='_blank' href='https://www.brother.co.jp/privacy/bil/index.aspx'>プライバシーポリシー</a></font></P></td>
+<td><P align='left'><font size='2'><a target='_blank' href=''></a></font></P></td>
+<td><P align='left'><font size='2'><a target='_blank' href=''></a></font></P></td>
+</tr>
+</table>
+<input type="hidden" name="EnqueteNo" Value="14569">
+<input type="hidden" name="CopyRight" Value="1">
+</form>
+</div>
+</body>
+</html>
